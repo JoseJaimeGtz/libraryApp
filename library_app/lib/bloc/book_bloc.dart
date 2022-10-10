@@ -28,7 +28,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
           try {
             title = book['volumeInfo']['title'];
           } catch (e) {
-            title = 'No hay título disponible';
+            title = '-';
           }
 
           // Book date
@@ -36,7 +36,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
           try {
             date = book['volumeInfo']['publishedDate'];
           } catch (e) {
-            date = '(s.f.)';
+            date = '-';
           }
 
           // Book description
@@ -44,7 +44,7 @@ class BookBloc extends Bloc<BookEvent, BookState> {
           try {
             description = book['volumeInfo']['description'];
           } catch (e) {
-            description = 'No hay descripción disponible';
+            description = '-';
           }
 
           // Book page count
